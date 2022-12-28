@@ -6,7 +6,7 @@
 /*   By: asioud <asioud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 12:05:29 by asioud            #+#    #+#             */
-/*   Updated: 2022/12/26 20:40:10 by asioud           ###   ########.fr       */
+/*   Updated: 2022/12/28 22:25:41 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	burning_ship(int x, int y, t_data *fractol)
 	fractol->cx = z.real;
 	fractol->cy = z.imm;
 	iter = 0;
-	while (sqr_d(z.real) + sqr_d(z.imm) <= 4 && iter < fractol->depth)
+	while ((sqr_d(z.real) + sqr_d(z.imm)) <= 4 && iter < fractol->depth)
 	{
 		temp = sqr_d(z.real) - sqr_d(z.imm) + fractol->cx;
 		z.imm = fabs(2 * z.real * z.imm) + fractol->cy;

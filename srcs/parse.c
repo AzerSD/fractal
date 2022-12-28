@@ -6,7 +6,7 @@
 /*   By: asioud <asioud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:06:36 by asioud            #+#    #+#             */
-/*   Updated: 2022/12/27 12:46:32 by asioud           ###   ########.fr       */
+/*   Updated: 2022/12/28 22:17:11 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,10 @@ void	arg_parse(int argc, char **argv, t_data *fractol)
 			fractol->depth = 20;
 		}
 		else
-		{
 			input_error();
-			exit(EXIT_FAILURE);
-		}
+
 	}
-	else if (argc == 4
-		&& ft_strncmp(argv[1], "julia", 5) == 0
+	else if (argc == 4 && ft_strncmp(argv[1], "julia", 5) == 0
 		&& ft_isfloat(argv[2]) && ft_isfloat(argv[3]))
 	{
 		fractol->set = &julia;
@@ -38,10 +35,7 @@ void	arg_parse(int argc, char **argv, t_data *fractol)
 		fractol->cy = ft_atof(argv[3]);
 	}
 	else
-	{
 		input_error();
-		exit(EXIT_FAILURE);
-	}
 }
 
 void	input_error(void)

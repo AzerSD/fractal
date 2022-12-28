@@ -6,7 +6,7 @@
 /*   By: asioud <asioud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 08:52:17 by asioud            #+#    #+#             */
-/*   Updated: 2022/12/27 16:42:21 by asioud           ###   ########.fr       */
+/*   Updated: 2022/12/28 22:08:44 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	init_data(t_data *data)
 int32_t	main(int argc, char **argv)
 {
 	t_data	data;
+
 	arg_parse(argc, argv, &data);
 	if (!(init_data(&data)))
 		return (EXIT_FAILURE);

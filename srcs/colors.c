@@ -6,7 +6,7 @@
 /*   By: asioud <asioud@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 09:55:26 by asioud            #+#    #+#             */
-/*   Updated: 2022/12/27 16:47:44 by asioud           ###   ########.fr       */
+/*   Updated: 2022/12/28 22:09:28 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ uint32_t	get_color(int n, int (*palette)(int), t_data data)
 	return (0xff);
 }
 
-int			palette(int n)
+int	palette(int n)
 {
 	uint32_t	palette[10];
 	int			i;
@@ -46,7 +46,7 @@ int			palette(int n)
 	return (palette[n % i]);
 }
 
-int			red_palette(int n)
+int	red_palette(int n)
 {
 	uint32_t	palette[20];
 	int			i;
@@ -66,7 +66,7 @@ int			red_palette(int n)
 	return (palette[n % i]);
 }
 
-int			wiki_palette(int n)
+int	wiki_palette(int n)
 {
 	int			i;
 	uint32_t	palette[16];
